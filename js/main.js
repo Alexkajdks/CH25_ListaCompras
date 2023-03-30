@@ -128,5 +128,14 @@ txtNombre.addEventListener("blur",function(event){
     txtNombre.value = txtNombre.value.trim();
     })
 
+    window.addEventListener("load", function (event){
+       contador =  localStorage.getItem("contadorProductos")
+       totalEnProductos   = localStorage.getItem("totalEnProductos")
+       costoTotal =  localStorage.getItem("costoTotal")
+
+       contadorProductos.innerText=contador;
+       productosTotal.innerText=totalEnProductos;
+       precioTotal.innerText = `$ ${costoTotal}`;
+    })
 
 
